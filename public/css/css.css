@@ -1,0 +1,69 @@
+body{font-family: "Open Sans",sans-serif; color: #808080d9}
+ul{list-style-type: none;padding: 0;}
+header{	background-image:linear-gradient(rgba(0,0,0,0.3),#000),  url("../image/hero.jpg");height: 100vh;background-size: cover;background-position: center;}
+.herotextbox{width: auto;position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);}
+header h1{margin: 0px;color: white;font-size: 55px;font-weight: 100;text-transform: uppercase;letter-spacing: 3px;}
+.btn{display: inline-block;padding: 10px 30px;text-decoration: none;border-radius: 100px;}
+.btn-full{color: white;border: 1px solid springgreen;background-color: springgreen;}
+.btn-ghost{border: 1px solid yellow;color: white;}
+.btn-full:hover{background-color: lightpink;border: 1px solid lightpink;}
+.btn-ghost:hover{background-color: yellow;}
+header ul{display: inline-block;float: right;min-width: 700px;}
+header ul li{float: left;padding: 25px 0px !important;max-width: 20% !important;}
+a{text-decoration-line: none;}
+header ul li a{color: #ffffff;text-decoration-line:none;width: 100%;display: block;text-align: center; border: 1px solid #ffffff00;transition: 1s ease-in-out;text-transform: uppercase;padding: 5px 10px;}
+header ul li a:hover{text-decoration-line:none;color: #ffffff;border-radius: 50px;border: 1px solid #ffffff;}
+.header_module{position: relative;top: 0;left: 0;width: 100%;padding-top: 50px;}
+.option{text-align: right;}
+img{display: block;width: 100%;}
+header .image_header img{max-width: 100px;}
+.fas_icon{font-size: 48px; font-weight: 100; color: #fb8a3a;}
+
+section .section_list{padding:100px 0px;margin-top: 0;}
+section .section_list h2{font-size: 40px;font-weight: 100;letter-spacing: 2px;text-align: center;width: 100%;color: gray;text-transform: uppercase;padding-bottom: 30px;position: relative;margin-bottom: 30px;}
+section .section_list h2::after{content: "";position: absolute;width: 200px;background-color: #fb8a3a;bottom: 0;left: 50%;height: 2px;transform: translate(-50%,0);}
+section .section_list p{text-align: center;letter-spacing: 1px;	color: #808080d9;font-size: 18px;}
+section .section_list .introduce_top{margin-bottom: 30px;}
+section .section_list h3{margin-bottom: 20px; letter-spacing: 1px;margin-top: 15px;}
+section .section_list .introduce_bottom p{text-align: left;}
+section .image_advertisement{padding: 0;}
+section .item_image_advertisement{padding: 0;display: block;overflow: hidden;}
+section .item_image_advertisement img{width: 100%;display: block;transition: 0.5s ease-in-out;object-fit: cover;object-position: center;}
+section .item_image_advertisement img:hover{transform: scale3d(1.1,1.1,1.1); opacity: 0.7;}
+section .work_path, section .price_product{background-color: #8080802b;}
+section .main_work_path figure{padding-right: 45px;}
+section .main_work_path figure div{max-width: 250px;float: right;}
+section .main_work_path figcaption{padding-left: 45px;}
+section .main_work_path figcaption ul{margin-top: 70px;}
+section .main_work_path figcaption ul li{margin-bottom: 25px;}
+section .main_work_path figcaption ul li.app_suggest img{max-height: 70px;object-position: center;object-fit: cover;border-radius: 10px}
+section .main_work_path figcaption span{width: 50px;height: 50px;display: block;color: #fb8a3a; border: 1px solid #fb8a3a; border-radius: 100%;text-align: center;height: 50px;vertical-align: middle;line-height: 50px; font-weight: 500;}
+section .main_work_path figcaption .title p{margin-right: 10px;text-align: left;}
+section .rate_place figure{overflow: hidden;}
+section .rate_place figure img{max-height: 600px;object-fit: cover; object-position: center;transition: 0.5s ease-in-out;}
+section .rate_place figure img:hover{transform: scale3d(1.1,1.1,1.1);}
+section .rate_place figcaption li{padding: 5px 0;}
+section .rate_place figcaption .fas_icon{font-size: 14px;}
+section .price_product .item{padding: 15px;background-color: #ffffff;}
+section .price_product .item h4{text-transform: uppercase;margin-bottom: 20px;font-size: 21px;}
+section .price_product .item p{text-align: left;}
+section .price_product .item p.price{color: #fb8a3a;font-size: 18px; width: 100%;}
+section .price_product .item p.price span{font-size: 60px;}
+section .price_product .item .price_product_main_top{border-bottom: 1px solid #8080802b;}
+section .price_product .item .price_product_main_bottom ul{margin-top: 10px;border-bottom: 1px solid #8080802b;}
+section .price_product .item .price_product_main_bottom li{padding: 10px 0px;}
+section .price_product .item .price_product_main_bottom span i{font-size: 18px; margin-right: 10px;color: #fb8a3a;}
+section .price_product .item .price_product_main_sign_up{padding: 20px 0px;text-align: center;}
+section button{background-color: #ffffff;font-size: 18;text-transform: uppercase;color: #fb8a3a;padding: 10px 15px;border: 1px solid #fb8a3a;border-radius: 50px; transition: 0.5s ease-in-out;}
+section button:hover{color: #ffffff;background-color: #fb8a3a;}
+section .form_input_mail textarea{width: 100%;display: block;height: 150px;border: 1px solid #ced4da;border-radius: 5px;}
+section .form_input_mail textarea:hover{background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+section .form_input_mail .map_google{height: 100%;}
+
+footer{background-color: #383636;padding: 50px 0;}
+footer .footer_suggess_app ul{display: block;}
+footer .footer_suggess_app .left li{float: left;margin-right: 15px;font-size: 20px;}
+footer .footer_suggess_app .right li{float: left;margin-left: 15px;font-size: 30px;}
+footer .footer_suggess_app .right ul{float: right;}
+footer .footer_last_word{text-align: center;font-size: 18px;}
+footer .footer_last_word .design_by{color: #fb8a3a;font-size: 19px;}

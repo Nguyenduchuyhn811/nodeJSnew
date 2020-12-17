@@ -1,0 +1,45 @@
+$(document).ready(function(){
+    $('.rate_place_main').owlCarousel({
+        margin:30,
+        nav:true,
+        dots:false,
+        autoplay:true,
+        autoplayTimeout:8000,
+        autoplayHoverPause:false,
+        autoplaySpeed:1000,
+        navSpeed:1000,
+        navigation:true,
+        pagination:false,
+        loop:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+
+    $('.price_product_main').owlCarousel({
+        margin:30,
+        nav:true,
+        dots:false,
+        autoplay:false,
+        autoplayTimeout:8000,
+        autoplayHoverPause:false,
+        autoplaySpeed:1000,
+        navSpeed:1000,
+        navigation:true,
+        pagination:false,
+        loop:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            1000:{
+                items:3
+            }
+        }
+    })
+});

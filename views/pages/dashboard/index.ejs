@@ -1,0 +1,115 @@
+
+	<script>
+		function button_test(){
+			if ('geolocation' in navigator) {
+				console.log('geolocation available');
+				navigator.geolocation.getCurrentPosition(async function(position) {   // hàm async function để chạy hàm await 
+					// console.log(position);
+					const lat = position.coords.latitude;
+					const lon = position.coords.longitude;
+					const mood = $('input[name=input]').val();
+					const data = { lat, lon, mood };
+					const options = {
+						method : 'POST',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body   : JSON.stringify(data)
+					};
+					// console.log(options);
+					const response = await fetch('/api', options);
+					const data_return = await response.json();
+					// fetch('/api', options).then(response => {
+					// 	console.log(response);
+					// })
+					console.log(data_return);
+				});
+			} else {
+				console.log('geolocation not available')
+			}
+		};
+
+		async function api_resource_test_func(){
+			const domainName = $('input[name=api_resource]').val();
+			const data = {'domainName':domainName};
+			const options = {
+				method : 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body   : JSON.stringify(data)
+			};
+			// console.log(options);
+			const response = await fetch('/api_resource', options);
+			const data_return = await response.json();
+			console.log(data_return);
+		}
+	</script>
+	<section>
+		<div class="section_list introduce">
+			<div class="container">
+				<div class="row">
+					<div class="introduce_top col-sm-12">
+						<label for="input">
+							<input type="text" name="input">
+							<button onclick="button_test()">Click !🌈</button>
+						</label>
+						<label for="api_resource">
+							<input type="text" name="api_resource">
+							<button onclick="api_resource_test_func()">Click !🌈</button>
+						</label>
+						<h2 class="title_section">Dashboard Page</h1>
+						<p>Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!</p>
+					</div>
+					<div class="introduce_bottom col-sm-12">
+						<div class="row">
+							<div class="item col-lg-3 col-sm-6">
+								<div class="item_icon">
+									<span class="fas_icon">
+										<i class="fal fa-infinity"></i>
+									</span>
+								</div>
+								<div class="item_title">
+									<h3>Up to 365 days/year</h3>
+									<p>Never cook again! We really mean that. Our subcription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style</p>
+								</div>
+							</div>
+							<div class="item col-lg-3 col-sm-6">
+								<div class="item_icon">
+									<span class="fas_icon">
+										<i class="fal fa-clock"></i>
+									</span>
+								</div>
+								<div class="item_title">
+									<h3>Up to 365 days/year</h3>
+									<p>Never cook again! We really mean that. Our subcription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style</p>
+								</div>
+							</div>
+							<div class="item col-lg-3 col-sm-6">
+								<div class="item_icon">
+									<span class="fas_icon">
+										<i class="fas fa-carrot"></i>
+									</span>
+								</div>
+								<div class="item_title">
+									<h3>Up to 365 days/year</h3>
+									<p>Never cook again! We really mean that. Our subcription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style</p>
+								</div>
+							</div>
+							<div class="item col-lg-3 col-sm-6">
+								<div class="item_icon">
+									<span class="fas_icon">
+										<i class="fad fa-shopping-cart"></i>
+									</span>
+								</div>
+								<div class="item_title">
+									<h3>Up to 365 days/year</h3>
+									<p>Never cook again! We really mean that. Our subcription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
